@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Get date and time using JavaScript.</h2>
+   <h4>Output after using the basic methods of the Date() class.</h4>
+   <button>Date</button>
+   <div  id="date"> </div><br>
+
+   <button>Time</button>
+   <div id="time"> </div>
+   <script type="text/javascript">
+      let date = document.getElementById("date");
+      let time = document.getElementById("time");
+      // creating the date object and getting the date and time
+      let newDate = new Date();
+      let year = newDate.getFullYear();
+      let month = newDate.getMonth();
+      
+      let todaySDate = newDate.getDate();
+    const datet = new Date();
+    console.log(date);
+      date.innerHTML = " " + todaySDate + "/ " + month + "/ " + year;
+      time.innerHTML = datet;
+   </script>
+</body>
+</html>

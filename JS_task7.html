@@ -1,0 +1,62 @@
+
+<html>
+ 
+    <head>
+ 
+        <script>
+ 
+            var obj = null;
+ 
+            var a ;
+ 
+            function init()
+ 
+            {
+ 
+                obj=document.getElementById("car");
+ 
+                obj.style.position="relative";
+ 
+                obj.style.left="0px";
+ 
+            }
+ 
+            function start()
+ 
+            {
+ 
+                obj.style.left=parseInt(obj.style.left)+10+"px";
+ 
+                a=setTimeout(start,20);
+ 
+            }
+ 
+            function stop()
+ 
+            {
+ 
+                clearTimeout(a);
+ 
+                obj.style.left="0px";
+ 
+            }
+ 
+            window.onload=init;
+ 
+        </script>
+ 
+    </head>
+ 
+    <body>
+ 
+        <img id="car" src="./images (1).jpeg" height="200px" width="200px"/>
+
+        <h1> Click the following buttons to handle animation.</h1>
+ 
+        <input type="button" value="Start" onclick="start()">
+ 
+        <input type="button" value="Stop" onclick="stop()">
+ 
+    </body>
+ 
+</html>
